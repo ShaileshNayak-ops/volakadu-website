@@ -87,4 +87,8 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-bulma-ui-build-lesson-15/
+temp/
+
+
+
+src/firebase.config.js
