@@ -1,29 +1,36 @@
+<script lang="ts" setup>
+import { ref } from "vue"
+import Footer from "@/components/Footer.vue"
+const cs = ref<string>("i")
+const changeCS = (to: string) => {
+  cs.value = to
+}
+const checkCS = (ref: string): boolean => {
+  return cs.value === ref
+}
+</script>
 <template>
-  <div class="">
+  <div class="is-fullheight">
     <div class="columns ml-3">
       <div class="column is-one-fifth">
         <aside class="menu">
-          <p class="menu-label is-size-2">About</p>
+          <p class="menu-label is-size-2 is-clickable" @click="changeCS('i')">
+            About
+          </p>
           <ul class="menu-list">
-            <li><a>History</a></li>
+            <li><a @click="changeCS('h')">History</a></li>
             <li><a>Members</a></li>
-            <li><a href="">Uniform</a></li>
+            <li><a @click="changeCS('u')">Uniform</a></li>
           </ul>
         </aside>
       </div>
 
       <div class="column">
-        <div class="block">This text is within a <strong>block</strong>.</div>
-        <div class="block">
-          This text is within a <strong>second block</strong>. Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa
-          fringilla egestas. Nullam condimentum luctus turpis.
-        </div>
-        <div class="block">
-          This text is within a <strong>third block</strong>. This block has no
-          margin at the bottom.
-        </div>
+        <div v-if="checkCS('i')">Index</div>
+        <div v-if="checkCS('h')">History</div>
+        <div v-if="checkCS('u')">Uniform</div>
       </div>
     </div>
   </div>
+  <Footer />
 </template>
