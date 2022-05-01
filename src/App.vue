@@ -6,6 +6,16 @@ import Navbar from "./components/Navbar.vue"
 <template>
   <main>
     <Navbar />
-    <RouterView />
+    <Suspense>
+      <template #default>
+        <RouterView />
+      </template>
+      <template #fallback> Loading... </template>
+    </Suspense>
   </main>
 </template>
+<style>
+.is-fullheight {
+  height: 100%;
+}
+</style>

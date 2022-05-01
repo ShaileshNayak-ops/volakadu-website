@@ -22,6 +22,9 @@
           <RouterLink to="/contactUs" class="navbar-item">
             Contact Us
           </RouterLink>
+          <RouterLink to="/publications" class="navbar-item">
+            Publications
+          </RouterLink>
         </div>
       </div>
     </nav>

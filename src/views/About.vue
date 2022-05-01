@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue"
 import Footer from "@/components/Footer.vue"
+import Uniform from "@/components/Uniform.vue"
 const cs = ref<string>("i")
 const changeCS = (to: string) => {
   cs.value = to
@@ -21,6 +22,7 @@ const checkCS = (ref: string): boolean => {
             <li><a @click="changeCS('h')">History</a></li>
             <li><a>Members</a></li>
             <li><a @click="changeCS('u')">Uniform</a></li>
+            <li><a @click="changeCS('p')">Publication</a></li>
           </ul>
         </aside>
       </div>
@@ -28,7 +30,10 @@ const checkCS = (ref: string): boolean => {
       <div class="column">
         <div v-if="checkCS('i')">Index</div>
         <div v-if="checkCS('h')">History</div>
-        <div v-if="checkCS('u')">Uniform</div>
+        <div v-if="checkCS('u')">
+          <Uniform />
+        </div>
+        <div v-if="checkCS('p')"></div>
       </div>
     </div>
   </div>

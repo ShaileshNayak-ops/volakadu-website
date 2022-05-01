@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as t,c as o,a as s}from"./index.9c785e6a.js";const a={},r={class:"has-background-dark has-text-white p-4 has-text-centered"},_=s("p",{class:""},"\xA9 2022 Shailesh Nayak",-1),c=[_];function n(d,h){return t(),o("footer",r,c)}var p=e(a,[["render",n]]);export{p as F};
