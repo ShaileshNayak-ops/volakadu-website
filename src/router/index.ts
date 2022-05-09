@@ -19,9 +19,9 @@ const router = createRouter({
       component: () => import('@/views/ContactUs.vue')
     },
     {
-      path: '/publications',
-      name: 'publications',
-      component: () => import('@/views/Publications.vue')
+      path: '/admissions',
+      name: 'addmissions',
+      component: () => import('@/views/Addmissions.vue')
     }
   ]
 })

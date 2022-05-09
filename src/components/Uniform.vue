@@ -27,7 +27,7 @@ export default defineComponent({
   <div class="is-fullheight">
     <div class="">
       <div class="">
-        <div class="card has-shadow column m-6 is-half">
+        <div class="card has-shadow column">
           <div class="card-header">
             <p class="card-header-title">Primary</p>
           </div>

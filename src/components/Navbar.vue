@@ -19,11 +19,11 @@
         <div class="navbar-end">
           <RouterLink class="navbar-item" to="/"> Home </RouterLink>
           <RouterLink to="/about" class="navbar-item"> About </RouterLink>
+          <RouterLink to="/admissions" class="navbar-item"
+            >Admissions</RouterLink
+          >
           <RouterLink to="/contactUs" class="navbar-item">
             Contact Us
-          </RouterLink>
-          <RouterLink to="/publications" class="navbar-item">
-            Publications
           </RouterLink>
         </div>
       </div>
