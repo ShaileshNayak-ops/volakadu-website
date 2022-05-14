@@ -3,7 +3,6 @@
     <!-- First Container -->
 
     <div class="container">
-      <h1>{{ PHP_PATH }}</h1>
       <div class="columns is-multiline p-5 h-full">
         <div class="card has-shadow column m-6">
           <div class="card-header">
@@ -57,7 +56,7 @@
             <section class="text-center m-2 text-blue-600">
               Somewhere@somewhere.place
             </section>
-            <form :action="sendMail" method="POST">
+            <form action="./php/sendMail.php" method="POST">
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
@@ -130,29 +129,6 @@
   </div>
   <Footer />
 </template>
-<script lang="ts">
-import { defineComponent, ref } from "vue"
-import Footer from "@/components/Footer.vue"
-export default defineComponent({
-  setup() {
-    const phpPath: string = import.meta.env.VITE_PHP_PATH
-    const getMailPath = (): string => {
-      if (import.meta.env.PROD) {
-        return "./php/sendMail.php"
-      } else {
-        return phpPath.concat("/php/sendMail.php")
-      }
-    }
-    return {
-      PHP_PATH: phpPath,
-      sendMail: getMailPath(),
-    }
-  },
-  components: {
-    Footer,
-  },
-})
-</script>
 <style scoped>
 @media (max-width: 750px) {
   .map-responsive {
